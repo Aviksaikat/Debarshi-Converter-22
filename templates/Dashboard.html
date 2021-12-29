@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='Dashboard.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='/images/image1.jpg')}}">
+</head>
+<body>
+<div class="main">
+    <div class="content">
+        <h1>PDF to DOCX Converter</h1>
+        <p>
+            <form action="/upload" enctype="multipart/form-data" method="POST">
+            <div class="op">
+                <select name="op1">
+                    <option>PDF</option>
+                    <option>DOCX</option>
+                </select>
+                <span>to</span>
+                <select name="op2">
+                    <option>DOCX</option>
+                    <option>PDF</option>
+                </select>
+            </div>
+            <p>
+                <input type="file" name="file">
+            </p>
+            <p>
+                <button type="submit" class="btn">Download</button>
+            </p>
+            </form>
+        </p>
+    </div>
+</div>
+</body>
+</html>
